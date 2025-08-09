@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevClub Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Orbitron:wght@400;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Estilo para posicionar o texto "Novo Lançamento" sobre a imagem */
+    .product-img {
+      position: relative;
+      display: inline-block;
+    }
+    .product-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #00ffff;
+      padding: 5px 10px;
+      font-weight: 600;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      pointer-events: none;
+      z-index: 10;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">DevClub Store</div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#contatos">Contatos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home">
+  <h1>Bem-vindo à nossa loja</h1>
+  <p>
+    Aqui você encontra produtos de alta qualidade, design moderno e tecnologia de ponta.
+    Nosso objetivo é oferecer a melhor experiência de compra, com atendimento personalizado
+    e preços justos. Explore nossos produtos e descubra tudo o que preparamos para você.
+  </p>
+  <a href="#produtos" class="btn-link">Conheça nossos produtos</a>
+</section>
+
+<section id="produtos" class="container">
+  <h2>Produtos</h2>
+  <p>Veja nossa seleção especial de produtos.</p>
+
+  <div class="list">
+    <!-- Item 1 -->
+    <div class="item active">
+      <div class="product-img">
+        <img src="imagens/apple-watch.png" alt="Apple Watch" />
+        <span class="product-tag">Novo Lançamento</span>
+      </div>
+      <div class="content">
+        <p class="product-name">Apple Watch Series 10</p>
+        <p class="description">
+          O Apple Watch Series 10, lançado em setembro de 2024, é a última geração do relógio inteligente da Apple, trazendo avanços importantes em design, performance e saúde. Ele possui um design mais fino, cerca de 10% menor que o modelo anterior, com uma tela OLED maior e mais brilhante, facilitando a visualização mesmo em ângulos variados e sob luz intensa. Está disponível em dois tamanhos (42mm e 46mm) e várias opções de acabamento em alumínio e titânio.
+        </p>
+        <button class="btn">Saiba Mais</button>
+        <div class="indicators">
+          <div class="numbers">01</div>
+          <div class="dots">
+            <div class="dot"></div>
+            <div class="dot active"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="item">
+      <div class="product-img">
+        <img src="imagens/air-pods.png" alt="AirPods Max" />
+        <span class="product-tag">Novo Lançamento</span>
+      </div>
+      <div class="content">
+        <p class="product-name">AirPods Max</p>
+        <p class="description">
+          O AirPods Max é o fone de ouvido over-ear premium da Apple, conhecido pela qualidade de áudio superior com graves profundos, médios claros e agudos nítidos. Ele oferece cancelamento ativo de ruído muito eficiente, além do modo Transparência para ouvir o ambiente quando necessário. Equipado com o chip H1 em cada concha, garante conexão estável via Bluetooth 5.0 e integração perfeita com dispositivos Apple. A bateria dura até 20 horas com cancelamento ativado e pode ser recarregada rapidamente via USB-C. Seu design elegante em alumínio com almofadas confortáveis proporciona uso prolongado sem incômodo.
+        </p>
+        <button class="btn">Saiba Mais</button>
+        <div class="indicators">
+          <div class="numbers">02</div>
+          <div class="dots">
+            <div class="dot"></div>
+            <div class="dot active"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="item">
+      <div class="product-img">
+        <img src="imagens/vision-pro.png" alt="Vision Pro" />
+      </div>
+      <div class="content">
+        <p class="product-tag">Alta Performance</p>
+        <p class="product-name">Apple Vision Pro</p>
+        <p class="description">
+          O Apple Vision Pro é um headset de realidade mista lançado pela Apple que combina realidade aumentada (AR) e realidade virtual (VR). Ele permite interagir com conteúdos digitais integrados ao ambiente real, oferecendo experiências imersivas para trabalho, jogos, entretenimento e comunicação. Com telas de alta resolução, sensores avançados e controle por voz, olhos e gestos, o Vision Pro promete revolucionar a forma como usamos tecnologia. Seu design é leve e confortável para uso prolongado, e o sistema operacional visionOS é exclusivo para essa plataforma.
+        </p>
+        <button class="btn">Saiba Mais</button>
+        <div class="indicators">
+          <div class="numbers">03</div>
+          <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot active"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="arrows">
+    <button class="arrows-btn" id="prev" aria-label="Produto anterior">
+      <!-- SVG seta esquerda -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+      </svg>
+    </button>
+    <button class="arrows-btn" id="next" aria-label="Próximo produto">
+      <!-- SVG seta direita -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+      </svg>
+    </button>
+  </div>
+</section>
+
+<section id="contatos" class="contatos">
+  <h2>Entre em Contato</h2>
+  <p>Fale diretamente comigo:</p>
+  <div class="contatos-links">
+    <a href="https://wa.me/5516997135203" target="_blank" rel="noopener noreferrer">
+      <img src="imagens/icons8-whatsapp-48.png" alt="WhatsApp" /> WhatsApp
+    </a>
+    <a href="mailto:natalia.pastre@yahoo.com.br">
+      <img src="imagens/icons8-yahoo-mail-app-48.png" alt="Email" /> E-mail
+    </a>
+    <a href="https://www.linkedin.com/in/nataliapastre-dev/" target="_blank" rel="noopener noreferrer">
+      <img src="imagens/icons8-linkedin-48.png" alt="LinkedIn" /> LinkedIn
+    </a>
+    <a href="https://github.com/natipastre" target="_blank" rel="noopener noreferrer">
+      <img src="imagens/icons8-github-48.png" alt="GitHub" /> GitHub
+    </a>
+  </div>
+</section>
+
+<script src="scripts.js"></script>
+</body>
+</html>
